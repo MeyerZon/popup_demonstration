@@ -1,0 +1,41 @@
+/*TODO TEMP,REMOVE IT BEFORE LOADING! */
+html,
+body,
+html *,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100lvh;
+  background-color: azure;
+}
+
+/*TODO TEMP,REMOVE IT BEFORE LOADING! */
+:root {
+  --pop-up-max-height: 70lvh;
+}
+
+.sliding-pop-up {
+  width: 100vw;
+  height: fit-content;
+  max-height: var(--pop-up-max-height);
+  min-height: 10lvh;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0 -5px 18px 1px rgb(0 0 0 / 38%);
+  position: fixed;
+
+  transition: 0.4s ease-in-out;
+  bottom: calc(0px - var(--pop-up-max-height));
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.show-pop-up {
+  bottom: 0px;
+}
